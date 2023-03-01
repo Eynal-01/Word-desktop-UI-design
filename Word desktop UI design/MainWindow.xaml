@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Word_desktop_UI_design"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Icon="Icons/word.png">
+        Title="MainWindow" Height="450" Width="790" Icon="Icons/word.png">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -114,9 +114,10 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="5*"/>
             </Grid.RowDefinitions>
-            <WrapPanel Background="black">
+            <WrapPanel Background="#4984FF ">
                 <Canvas>
                     <TextBox Style="{DynamicResource TextBoxStyle1}"
+                    Name="FilesTxtb"
                     Padding="10"
                     Canvas.Left="10"
                     Canvas.Top="15"
@@ -126,6 +127,7 @@
                     </TextBox>
                     <Button
                     Style="{DynamicResource ButtonStyle1}"
+                        Name="OpenFileBtn"
                     Width="50"
                     Height="40"
                     Background="white"
@@ -133,6 +135,7 @@
                     BorderBrush="DarkGray"
                     Canvas.Left="190"
                     Canvas.Top="15"
+                        Click="OpenFileBtn_Click"
                         
                     ></Button>
                     <Image
@@ -151,27 +154,72 @@
                     Height="40"
                     Background="white"
                     BorderBrush="DarkGray" 
+                            Click="SaveBtn_Click"
                     >
                     </Button>
-                    <CheckBox
-                    BorderThickness="0"
-                    Background="Transparent"
-                    Name="AutoSaveCheckBox"
+                    <Button Style="{DynamicResource ButtonStyle1}"
+                    Content="Cut"
+                    Foreground="Gray"
+                    Name="CutBtn"
+                    Canvas.Left="410"
+                    Canvas.Top="15"
+                    Width="80"
+                    Height="40"
+                    Background="white"
                     BorderBrush="DarkGray" 
-                    Canvas.Left="350"
-                    Canvas.Top="20"
-                        Height="15"
+                            Click="CutBtn_Click"
                     >
-                        <CheckBox.RenderTransform>
-                            <ScaleTransform
-                        ScaleX="2"
-                        ScaleY="2"
-                        />
-                        </CheckBox.RenderTransform>
-                    </CheckBox>
-                    <Image Name="Off" Source="Icons/offbtn.jpg" Width="60" Canvas.Left="350" Canvas.Top="30"></Image>
+                    </Button>
+                    <Button Style="{DynamicResource ButtonStyle1}"
+                    Content="Copy"
+                    Foreground="Gray"
+                    Name="CopyBtn"
+                    Canvas.Left="500"
+                    Canvas.Top="15"
+                    Width="80"
+                    Height="40"
+                    Background="white"
+                    BorderBrush="DarkGray" 
+                            Click="CopyBtn_Click"
+                    >
+                    </Button>
+                    <Button Style="{DynamicResource ButtonStyle1}"
+                    Content="Paste"
+                    Foreground="Gray"
+                    Name="PasteBtn"
+                    Canvas.Left="590"
+                    Canvas.Top="15"
+                    Width="80"
+                    Height="40"
+                    Background="white"
+                    BorderBrush="DarkGray"
+                            Click="PasteBtn_Click"
+                    >
+                    </Button>
+                    <Button Style="{DynamicResource ButtonStyle1}"
+                    Content="Select all"
+                    Foreground="Gray"
+                    Name="SelectAllBtn"
+                    Canvas.Left="680"
+                    Canvas.Top="15"
+                    Width="80"
+                    Height="40"
+                    Background="white"
+                    BorderBrush="DarkGray" 
+                            Click="SelectAllBtn_Click"
+                    >
+                    </Button>
                 </Canvas>
             </WrapPanel>
+            <TextBox Grid.Row="1"
+                Name="WordTxtb"
+                FontSize="20"
+                FontWeight="SemiBold"
+                     TextChanged="WordTxtb_TextChanged"
+                    KeyDown="WordTxtb_KeyDown"
+                     
+                >
+            </TextBox>
         </Grid>
     </Grid>
 </Window>
