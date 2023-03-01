@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Word_desktop_UI_design"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Icon="Icons/word.png">
+    
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -16,9 +17,38 @@
                 <TextBox
                     Text="File location"
                     Padding="10"
-                    Margin="16"
+                    Margin="16, 16, 0, 16"
                     >
                 </TextBox>
+                <Button
+                    Margin="0, 16"
+                    Width="50"
+                    Background="white"
+                    BorderThickness="1"
+                    BorderBrush="DarkGray"
+                    ></Button>
+                <Button
+                    Name="SaveBtn"
+                    Margin="20, 16"
+                    Width="80"
+                    Background="white"
+                    BorderBrush="DarkGray"
+                    ></Button>
+                <CheckBox
+                    Name="AutoSaveCheckBox"
+                    Margin="10, 13"
+                    Background="white"
+                    BorderThickness="1"
+                    BorderBrush="DarkGray">
+                    <CheckBox.RenderTransform>
+                    <ScaleTransform
+                        ScaleX="3"
+                        ScaleY="3"
+                        
+                        >
+                    </ScaleTransform>
+                    </CheckBox.RenderTransform>   
+                </CheckBox>
             </WrapPanel>
         </Grid>
     </Grid>
