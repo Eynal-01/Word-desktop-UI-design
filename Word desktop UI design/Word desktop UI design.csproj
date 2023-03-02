@@ -98,13 +98,7 @@
     <Resource Include="Icons\word.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Icons\offbtn.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Icons\arrowtop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Icons\onnbtn.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

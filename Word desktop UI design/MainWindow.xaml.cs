@@ -49,7 +49,7 @@ namespace Word_desktop_UI_design
             {
                 WordTxtb.IsEnabled = true;
                 SaveBtn.IsEnabled = true;
-                //checkLbl.IsEnabled = true;
+                checkLbl.IsEnabled = true;
                 CutBtn.IsEnabled = true;
                 CopyBtn.IsEnabled = true;
                 PasteBtn.IsEnabled = true;
@@ -103,12 +103,14 @@ namespace Word_desktop_UI_design
             OpenFileBtn_Click(sender, e);
         }
 
-        private void WordTxtb_KeyDown(object sender, KeyEventArgs e)
+        private void AutoSaveCheckBox_Unchecked_1(object sender, RoutedEventArgs e)
         {
-            if(e.Key == Key.Enter)
-            {
+            IsClicked = false;
+        }
 
-            }
+        private void AutoSaveCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            IsClicked = true;
         }
     }
 }
